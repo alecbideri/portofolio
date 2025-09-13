@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style: none;
 }
@@ -29,7 +29,9 @@
 
 .logo:hover {
   color: orangered;
-  text-shadow: 0 0 25px orangered, 0 0 50px orangered;
+  text-shadow:
+    0 0 25px orangered,
+    0 0 50px orangered;
   transform: scale(1.1);
 }
 
@@ -109,7 +111,8 @@ span {
   gap: 2em;
 }
 
-.btn-1, .btn-2 {
+.btn-1,
+.btn-2 {
   padding: 15px 28px;
   border-radius: 8px;
   font-size: 18px;
@@ -148,20 +151,20 @@ span {
   width: 500px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: orangered;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.6);
   width: 50px;
 }
 
-.about{
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,63 +173,65 @@ span {
   background-color: black;
 }
 
-.about-img img{
+.about-img img {
   position: relative;
   width: 500px;
-  box-shadow: 0 0 25px orangered, 0 0 50px orangered;  
+  box-shadow:
+    0 0 25px orangered,
+    0 0 50px orangered;
   border-radius: 500px;
 }
 
-.about-content h2{
+.about-content h2 {
   text-align: left;
   color: white;
-  font-size: 42px;  
+  font-size: 42px;
 }
 
-.about-content h3{
+.about-content h3 {
   font-size: 62px;
   color: white;
 }
 
-.about-content p{
+.about-content p {
   color: white;
   font-size: 20px;
   margin: 2em 0 3em;
 }
 
-.contact-form h2{
+.contact-form h2 {
   text-align: center;
   margin-top: 3em;
   margin-bottom: 1em;
   font-size: 36px;
 }
 
-.contact-form form{
+.contact-form form {
   max-width: 50em;
   margin: 1rem auto;
   text-align: center;
   margin-bottom: 3em;
 }
 
-.contact-form form .input-box{
+.contact-form form .input-box {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .contact-form .input-box input,
-.contact-form textarea{
+.contact-form textarea {
   width: 100%;
   padding: 1.5em;
   font-size: 18px;
   color: black;
   background-color: white;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   margin: 1rem 0;
   resize: none;
 }
 
-.footer{
+.footer {
   position: relative;
   bottom: 0;
   width: 100%;
@@ -234,15 +239,15 @@ span {
   background-color: black;
 }
 
-.footer .social{
+.footer .social {
   text-align: center;
   padding-bottom: 25px;
   color: white;
 }
 
-.footer .social a{
+.footer .social a {
   font-size: 24px;
-  color:white;
+  color: white;
   border: 2px solid orangered;
   width: 40px;
   height: 40px;
@@ -251,43 +256,348 @@ span {
   text-align: center;
   border-radius: 50%;
   margin: 0 8px;
-  box-shadow: inset 0 0 10 px orangered, 0 0 10px orangered;
+  box-shadow:
+    inset 0 0 10 px orangered,
+    0 0 10px orangered;
   transition: 0.3s ease;
 }
 
-.footer .social a:hover{
-  transform: scale(1.2)translateY(-10px);
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-10px);
   color: orangered;
   border: 2px solid orangered;
 }
 
-.footer ul{
+.footer ul {
   margin-top: 0;
-  padding:0;
-  font-size:18px;
+  padding: 0;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
   text-align: center;
 }
 
-.footer ul li a{
+.footer ul li a {
   color: white;
   border-bottom: 3px solid transparent;
   transition: 0.3s ease;
 }
 
-.footer ul li a:hover{
+.footer ul li a:hover {
   border-bottom: 3px solid orangered;
 }
 
-.footer ul li{
+.footer ul li {
   display: inline-block;
   padding: 0 15px;
 }
 
-.footer .copyright{
+.footer .copyright {
   margin-top: 15px;
   text-align: center;
-  font-size:12px;
+  font-size: 12px;
   color: white;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 20px 8%;
+  }
+
+  .home {
+    padding: 30px 8% 0;
+  }
+
+  .about {
+    padding: 8% 6%;
+    gap: 6em;
+  }
+
+  .img-box img {
+    width: 400px;
+  }
+
+  .about-img img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    padding: 20px 6%;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 6% 60px;
+  }
+
+  .home-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+  }
+
+  .home-content h3 {
+    font-size: 32px;
+  }
+
+  .img-box img {
+    width: 350px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 4em;
+    padding: 8% 6%;
+  }
+
+  .about-content h2 {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .about-content h3 {
+    font-size: 48px;
+  }
+
+  .about-img img {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 4%;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .contact {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .home {
+    padding: 100px 4% 40px;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+    margin: 20px 0 25px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .btn-1,
+  .btn-2 {
+    padding: 12px 24px;
+    font-size: 16px;
+    width: 200px;
+  }
+
+  .img-box img {
+    width: 280px;
+  }
+
+  .about {
+    padding: 6% 4%;
+    gap: 3em;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content h3 {
+    font-size: 36px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+    margin: 1.5em 0 2em;
+  }
+
+  .about-img img {
+    width: 280px;
+  }
+
+  .contact-form {
+    padding: 0 4%;
+  }
+
+  .contact-form h2 {
+    font-size: 28px;
+  }
+
+  .contact-form form {
+    max-width: 100%;
+  }
+
+  .contact-form form .input-box {
+    flex-direction: column;
+  }
+
+  .contact-form .input-box input,
+  .contact-form textarea {
+    padding: 1.2em;
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 30px 4%;
+  }
+
+  .footer .social a {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    margin: 0 6px;
+  }
+
+  .footer ul {
+    font-size: 16px;
+  }
+
+  .footer ul li {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 12px 3%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .contact {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .home {
+    padding: 80px 3% 30px;
+  }
+
+  .home-content h1 {
+    font-size: 28px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .btn-1,
+  .btn-2 {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .img-box img {
+    width: 220px;
+  }
+
+  .about {
+    padding: 4% 3%;
+    gap: 2em;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .about-content h3 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-img img {
+    width: 220px;
+  }
+
+  .contact-form h2 {
+    font-size: 24px;
+  }
+
+  .contact-form .input-box input,
+  .contact-form textarea {
+    padding: 1em;
+    font-size: 14px;
+  }
+
+  .footer ul {
+    font-size: 14px;
+  }
+
+  .footer ul li {
+    display: block;
+    padding: 5px 0;
+  }
 }

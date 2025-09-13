@@ -19,6 +19,11 @@
         <a href="#">Projects</a>
         <a href="#">Education</a>
       </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <a href="#" class="contact">Contact Me</a>
     </header>
     <section class="home">
@@ -112,5 +117,33 @@
 
       <p class="Copyright">© 2024 Alec | All Rights Reserved</p>
     </footer>
+
+    <script>
+      // Mobile menu toggle functionality
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a nav link
+      const navLinks = document.querySelectorAll(".navbar a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navbar.classList.remove("active");
+          menuToggle.classList.remove("active");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && !menuToggle.contains(e.target)) {
+          navbar.classList.remove("active");
+          menuToggle.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
