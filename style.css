@@ -417,8 +417,7 @@ span {
   }
 
   .contact {
-    padding: 8px 20px;
-    font-size: 14px;
+    display: none;
   }
 
   .home {
@@ -530,8 +529,7 @@ span {
   }
 
   .contact {
-    padding: 6px 16px;
-    font-size: 12px;
+    display: none;
   }
 
   .home {
